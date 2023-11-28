@@ -1,0 +1,250 @@
+.section-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts__info {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 40px;
+
+    span {
+        color: #fff
+    }
+
+    p+p {
+        margin-top: 12px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+        max-width: calc((100% / 6 * 3) - 15px);
+
+        p+p {
+            margin-top: 8px;
+        }
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+margin-bottom: 48px;
+        p+p {
+            margin-top: 12px;
+        }
+    }
+}
+
+.contacts__list {
+    margin-bottom: 37px;
+
+    @include breakpoint(md) {
+        margin-bottom: 234px;
+    }
+
+    @include breakpoint(lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.contacts__item-text {}
+
+.contacts__item {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    &+.contacts__item {
+        margin-top: 40px;
+    }
+
+    @include breakpoint(md) {
+        display: flex;
+    }
+
+    @include breakpoint(lg) {
+        &+.contacts__item {
+            margin-top: 0;
+        }
+
+    }
+   
+}
+
+.contacts__item-icon {
+    margin-bottom: 12px;
+    display: flex;
+    width: 72px;
+    height: 72px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    @include breakpoint(md) {
+        margin-right: 16px;
+        flex: 0 0 auto;
+    }
+
+    @include breakpoint(lg) {
+        width: 48px;
+        height: 48px;
+        padding: 12px;
+
+        svg {}
+    }
+    @include breakpoint(xl) {
+        width: 72px;
+    height: 72px;
+    }
+}
+
+.contacts__item-value {
+    color: #FFF;
+    font-family: $furore;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include breakpoint(md) {
+        font-size: 32px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 24px;
+    }
+    @include breakpoint(xl) {
+        font-size: 32px;
+
+    }
+}
+
+.contacts__item-title {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 8px;
+
+    /* 22.4px */
+    @include breakpoint(lg) {
+        margin-bottom: 2px;
+        font-size: 14px;
+    }
+    @include breakpoint(xl) {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+}
+
+.marquee {
+    width: 100%;
+    grid-column-gap: 1rem;
+    background: linear-gradient(90deg, #EAFDF5 33.16%, #FFF 100%);
+    display: flex;
+    overflow: hidden;
+    padding: 24px 0;
+    white-space: nowrap;
+    transform: rotateZ(-1.5deg);
+
+    @include breakpoint(lg) {
+        padding: 32px 0;
+    }
+}
+
+
+
+.section-marquee {
+    margin-bottom: 45px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 17px;
+    }
+    @include breakpoint(xl) {
+        margin-bottom: 70px;
+    }
+}
+
+.marquee-icon {
+    @include breakpoint(lg) {
+     svg {
+        height: 44px;
+    }
+   
+    }
+    @include breakpoint(xl) {
+        svg {
+           height: 66px;
+       }
+      
+       }
+}
+
+.marquee-item {
+    color: #212B23;
+    font-family: $furore;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.8%;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(md) {
+        font-size: 56px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 36px;
+    }
+    @include breakpoint(xl) {
+        font-size: 56px;
+    }
+}
+
+
+.marquee-content {
+    min-width: 100%;
+    grid-column-gap: 24px;
+    flex: none;
+    justify-content: space-around;
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1rem));
+    }
+}
+
+.footer__devs {
+    text-align: center;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    span {
+        display: block;
+    }
+}

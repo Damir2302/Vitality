@@ -1,0 +1,38 @@
+include _mixins
+block header
+    header#header.header
+
+        .container
+            .header__inner
+                a(href="/").header__logo
+                            include ../assets/images/logo.svg
+                
+                   
+                .header__menu
+                    .header__menu-top--mobile
+                        a(href="/").header__logo
+                                include ../assets/images/logo.svg
+                        .close-btn 
+                            include ../assets/images/close.svg
+                    .header__menu-wrap
+
+                        ul.nav-list
+                            li.nav-list__item.active
+                                a.nav-list__link(href="product1.html") Продукция 
+                            li.nav-list__item
+                                a.nav-list__link(href="about.html") О бренде
+                            li.nav-list__item
+                                a.nav-list__link(href="where-to-buy.html") Где купить
+                            li.nav-list__item
+                                a.nav-list__link(href="contacts.html") Контакты
+                    .header__menu-bottom--mobile 
+                        .header__phone
+                            .header__phone-icon 
+                                include ../assets/images/phone.svg    
+                            a(href="tel:+8 (800) 100-45-69") +8 (800) 100-45-69
+                .header__phone
+                    .header__phone-icon 
+                        include ../assets/images/phone.svg    
+                    a(href="tel:+8 (800) 100-45-69") +8 (800) 100-45-69
+                .header__burger#menuBtn
+                    include ../assets/images/burger.svg

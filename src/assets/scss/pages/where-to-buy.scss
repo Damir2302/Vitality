@@ -1,0 +1,108 @@
+.section-buy,
+.section-error {
+
+    .page-title {
+
+        color: #fff;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 94.8%;
+        margin-bottom: 40px;
+        @include breakpoint(md) {
+            font-size: 64px;
+
+        }
+        @include breakpoint(lg) {
+            font-size: 42px;
+
+        }
+        @include breakpoint(xl) {
+            font-size: 64px;
+            margin-bottom: 48px;
+
+        }
+    }
+    @include breakpoint(md) {
+        padding-top: 66px;
+    }
+    @include breakpoint(lg) {
+        padding-top: 25px;
+    }
+    @include breakpoint(xl) {
+        padding-top: 53px;
+    }
+}
+
+.buy {
+    @include breakpoint(lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
+    }
+}
+
+.buy__list {
+    margin-bottom: 40px;
+}
+
+.buy__item {
+    &+.buy__item {
+        margin-top: 24px;
+    }
+    @include breakpoint(xl) {
+        &+.buy__item {
+            margin-top: 32px;
+        }
+    }
+}
+
+.buy__item-name {
+    margin-bottom: 12px;
+    font-family: $furore;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @include breakpoint(md) {
+        font-size: 32px ;
+    }
+    @include breakpoint(lg) {
+        font-size: 24px;
+ 
+    }
+    @include breakpoint(xl) {
+        font-size: 32px;
+
+    }
+}
+
+.buy__item-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    @include breakpoint(lg) {
+        font-size: 14px;
+
+    }
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+.buy__picture {
+    margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+   @include breakpoint(md) {
+    max-width: 465px;
+    margin-inline: auto;
+   }
+   @include breakpoint(lg) {
+    margin-bottom: 0;
+   
+   }
+   @include breakpoint(xl) {
+     max-width: 620px;
+   }
+}

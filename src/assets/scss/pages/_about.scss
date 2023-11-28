@@ -1,0 +1,125 @@
+.section-about {
+    background: var(--gradient-light-green-background, linear-gradient(90deg, #EAFDF5 33.16%, #FFF 100%));
+ 
+
+    .page-title {
+        span {
+            display: block;
+        }
+    }
+  
+}
+
+.about {
+    @include breakpoint(md) {
+        padding-top: 65px;
+    }
+
+    @include breakpoint(xl) {
+      padding-top: 52px;
+    }
+}
+
+.about__text {
+    max-width: 320px;
+
+    @include breakpoint(md) {
+        max-width: unset;
+    }
+}
+
+.page-title {}
+
+.about__description {
+    margin-bottom: 40px;
+    color: #212B23;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    @include breakpoint(md) {}
+
+    @include breakpoint(xl) {
+        margin-bottom: 48px;
+        font-size: 20px;
+
+    }
+}
+
+.about__list {
+    @include breakpoint(lg) {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-column-gap: 40px;
+        column-count: 2;
+        column-gap: 40px;
+    }
+}
+
+.about__item {
+    display: flex;
+    align-items: center;
+
+    &+.about__item {
+        margin-top: 16px;
+    }
+
+    @include breakpoint(lg) {
+        &+.about__item {
+            margin-top: 24px;
+        }
+    }
+    @include breakpoint(xl) {
+        &+.about__item {
+            margin-top: 32px;
+        }
+    }
+}
+
+.about__icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--opacity-10-green, rgba(78, 176, 140, 0.10));
+    border-radius: 50%;
+    margin-right: 8px;
+    flex: 0 0 auto;
+
+    @include breakpoint(md) {
+        margin-right: 16px;
+    }
+}
+
+
+.about__title {
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: 220px;
+
+    @include breakpoint(md) {
+        max-width: unset;
+    }
+}
+
+.flag {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    @include breakpoint(md) {
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+
+}

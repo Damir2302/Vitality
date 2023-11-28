@@ -1,0 +1,399 @@
+.section-hero {
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(md) {
+        padding-top: 14px;
+    }
+    @include breakpoint(lg) {
+      
+        margin: 0 auto;
+        padding: 0 var(--container);
+        padding-top: 65px;
+        width: 100%;
+        // height: 100%;
+
+        max-width: 1440px;
+        box-sizing: border-box;
+    }
+    @include breakpoint(xl) {
+        padding-top: 117px;
+    }
+}
+
+.hero__description {
+    color: $black;
+    margin-bottom: 16px;
+    line-height: 140%;
+    font-size: 16px;
+
+    @include breakpoint(md) {
+        margin-bottom: 24px;
+        max-width: 583px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+        max-width: unset;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+        margin-bottom: 32px;
+
+    }
+}
+
+.hero-text {
+    max-width: 340px;
+
+    @include breakpoint(md) {
+        max-width: unset;
+    }
+}
+
+.hero__btn {
+    .btn--green {
+        width: 100%;
+    }
+
+    @include breakpoint(md) {
+        .btn--green {
+            width: auto;
+        }
+    }
+
+    @include breakpoint(lg) {
+        .btn--green {
+            padding: 14px 95px;
+        }
+
+    }
+
+    @include breakpoint(xl) {
+        .btn--green {
+            padding: 13px 40px;
+        }
+    }
+}
+
+.hero__picture-right {
+    position: absolute;
+    top: 50px;
+
+    left: 125px;
+    height: 193px;
+
+    img {
+        max-height: 100%;
+    }
+
+    // transform: rotate(23.995deg);
+    @include breakpoint(md) {
+        left: 325px;
+        height: 273px;
+        top: unset;
+        bottom: 430px;
+    }
+
+    @include breakpoint(lg) {
+        height: 243px;
+        left: 195px;
+        bottom: 230px;
+    }
+
+    @include breakpoint(xl) {
+        left: 255px;
+        height: 353px;
+        bottom: 350px;
+    }
+    @include breakpoint(hd) {
+        left: 195px;
+    }
+}
+
+.hero__picture-left {
+    position: absolute;
+    top: 50px;
+    left: 27px;
+    height: 262px;
+
+    img {
+        max-height: 100%;
+    }
+
+    @include breakpoint(md) {
+        left: 182px;
+        top: unset;
+        bottom: 340px;
+        height: 360px;
+    }
+
+    @include breakpoint(lg) {
+        height: 310px;
+        left: 80px;
+        bottom: 170px;
+    
+    }
+
+    // transform: rotate(-19.903deg);
+    @include breakpoint(xl) {
+        height: 480px;
+        bottom: 220px;
+    }
+    @include breakpoint(hd) {
+        bottom: 280px;
+        left: 0;
+    }
+}
+
+.hero__picture-logo-right {
+    position: absolute;
+    top: 50px;
+
+    left: 147px;
+    max-width: 35px;
+    @include breakpoint(md) {
+        top: unset;
+        left: 357px;
+        bottom: 660px;
+        max-width: 55px;
+    }
+    @include breakpoint(lg) {
+      bottom: 440px;
+        left: 230px;
+        max-width: 44px;
+    }
+    @include breakpoint(xl) {
+        max-width: 60px;
+        bottom: 650px;
+        left: 310px;
+    }
+    @include breakpoint(hd) {
+        bottom: 660px;
+        left: 250px;
+    }
+}
+
+.hero__picture-logo-left {
+    position: absolute;
+    top: 30px;
+    max-width: 17px;
+    left: 137px;
+    @include breakpoint(md) {
+        top: unset;
+        left: 340px;
+        bottom: 720px;
+        max-width: 25px;
+    }
+    @include breakpoint(lg) {
+        bottom: 480px;
+        left: 220px;
+    }
+    @include breakpoint(xl) {
+        max-width: 29px;
+        left: 290px;
+        bottom: 720px;
+    }
+    @include breakpoint(hd) {
+        bottom: 730px;
+        left: 230px;
+    }
+
+}
+
+
+
+.hero__pictures {
+    min-height: 568px;
+    position: relative;
+    @include breakpoint(md) {
+         position: static;
+    }
+    @include breakpoint(lg) {
+       
+        min-height: unset;
+    }
+}
+
+.hero__picture-hand {
+    position: absolute;
+    bottom: -110px;
+    left: -20px;
+
+    @include breakpoint(md) {
+        bottom:0;
+    }
+
+    @include breakpoint(lg) {
+        bottom: -14px;
+    }
+
+    @include breakpoint(xl) {
+        position: fixed;
+        bottom: -20%;
+        left: 0;
+        width: 725px;
+        height: 567px;
+    }
+}
+
+.hero__partners-imgs {
+    display: flex;
+    margin-bottom: 8px;
+    @include breakpoint(md) {
+        flex: 0 0 auto;
+        transform: translateX(20px);
+    }
+    @include breakpoint(lg) {
+        img {
+           height: 62px; 
+           width: 62px;
+        }
+    
+    }
+    @include breakpoint(xl) {
+        img {
+            height: 77px; 
+            width: 77px;    
+         }
+    }
+}
+
+.hero__circle {
+    position: absolute;
+    top: 140px;
+    height: 630px;
+    // clip-path: circle(50% at 50% 50%);
+    // transform: translate(-50%, 0);
+    right: 15%;
+    border-radius: 50%;
+    width: 630px;
+    background-color: rgba(78, 176, 140, 0.10);
+
+    @include breakpoint(md) {
+        width: 900px;
+        height: 900px;
+        top: 128px;
+        // right: 17%;
+        // transform: translate(-30%, 0);
+        right: 0;
+        transform: translate(-15%, 0);
+    }
+
+    @include breakpoint(lg) {
+        top: -47px;
+        left: -43%;
+        bottom: 0;
+        position: fixed;
+        transform: unset;
+    }
+
+    @include breakpoint(xl) {
+        left: -30%;
+        width: 1020px;
+        height: 1020px;
+    }
+
+    @include breakpoint(hd) {
+        left: -12%;
+        width: 1020px;
+        height: 1020px;
+    }
+}
+
+.hero__partners-text {
+    font-family: $furore;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $black;
+
+    span {
+        color: $green;
+        display: block;
+    }
+
+    @include breakpoint(md) {
+        font-size: 32px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 24px;
+        flex: 0 0 auto;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 32px;
+    }
+
+}
+
+.hero {
+    margin: 0 auto;
+    padding: 0 var(--container);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 134rem;
+    box-sizing: border-box;
+    // min-height: calc(100vh - var(--padding-top));
+    position: relative;
+    .page-title {
+        max-width: 700px;
+    }
+    @include breakpoint(lg) {
+        max-width: unset;
+        padding: 0;
+        position: static;
+    }
+
+    @include breakpoint(xl) {}
+
+}
+
+.hero__inner {
+    @include breakpoint(lg) {
+        width: calc((100% / 6 * 3) - 18px);
+        margin-left: auto;
+    }
+}
+
+.hero__partners-img {
+    &:nth-child(2) {
+        transform: translateX(-22px);
+    }
+
+    &:nth-child(3) {
+        transform: translateX(-44px);
+
+    }
+}
+
+.hero__partners-wrapper {
+
+    transform: translateY(-73px);
+
+    @include breakpoint(md) {
+        transform: unset;
+        margin-top: 72px;
+        margin-right: 43px;
+    }
+
+    @include breakpoint(lg) {
+        width: calc(50% - 18px);
+        margin-left: auto;
+        margin-right: 0;
+    }
+    @include breakpoint(xl) {
+        margin-top: 180px;
+     
+        display: flex;
+    }
+}
+.hero__partners {
+    @include breakpoint(md) {    
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,58 @@
+include _mixins
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title= title || 'Page name'
+
+        // Styles::Start
+        include _loadCss
+        // Styles::End
+
+        // Yandex Map
+        if yandexMap == true
+            script(src="https://api-maps.yandex.ru/2.1/?apikey=39aa5abe-ec5b-45c6-9d35-323c61ba7263&lang=ru_RU")
+
+    body(class= bodyClass ? bodyClass : '', style= bodyStyle ? bodyStyle : '')
+
+        #page
+
+            // Header::Start
+            block header
+                include _header
+            // Header::End
+
+            // Main::Start
+            main#main
+                block main
+            // Main::End
+
+            // Footer::Start
+            block footer
+                include _footer
+            // Footer::End
+
+       
+   
+        // Popup-Success::Start
+        #popup-success.popup
+
+            .container
+
+                .popup-success
+
+                    .check-icon
+
+                    .popup-title УСпешно
+                    .popup-subtitle Мы получили данные, скоро свяжемся с Вами и пригласим в гости, добро пожаловать!
+            
+                    .btn-style.btn-style--orange вернуться на главную
+        // Popup-Success::End
+
+        // Scripts::Start
+        include _loadScripts
+        // Scripts::End

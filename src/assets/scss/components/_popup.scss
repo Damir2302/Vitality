@@ -1,0 +1,239 @@
+// FANCYBOX STYLES
+.fancybox__slide.is-selected.has-inline,
+.fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
+    cursor: default;
+}
+
+.fancybox__slide {
+    padding: 0;
+}
+
+.fancybox__content  .carousel__button.is-close {
+    top: 20px;
+    right: 20px;
+}
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+    outline: none!important;
+}
+.fancybox__thumb {
+    border-radius: 0;
+}
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+    border-color: #000;
+    border-width: 2px;
+    border-radius: 0;
+}
+// POPUP STYLES
+.popup {
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    display: none;
+    color: #000;
+  
+}
+
+.popup button.is-close {
+    --carousel-button-svg-filter: none;
+    --carousel-button-svg-stroke-width: 2;
+
+    width: auto;
+    height: auto;
+  
+
+}
+.popup-modal {
+    @include breakpoint(md) {
+        max-width: 432px;
+    }
+    @include breakpoint(lg) {
+        max-width: 554px;
+    }
+}
+.popup button.is-close svg {
+    stroke: #000;
+}
+
+.popup-title {
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 700;
+    @include breakpoint(md) {
+        font-size: 28px;
+
+    }
+    @include breakpoint(lg) {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+.popup-subtitle {
+    margin-bottom: 30px;
+       font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: center;
+}
+
+.popup-form-wrap {
+
+    @include breakpoint(md) {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 624px;
+    }
+}
+
+.popup-form-row {
+    margin: 0 auto 20px;
+    max-width: 260px;
+
+    @include breakpoint(md) {
+        margin-bottom: 30px;
+        width: calc(100% / 3 - (20px / 3));
+    }
+}
+
+.popup-form-row label,
+.popup-form-row .select-label {
+    margin-bottom: 4px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.popup-form-row input {
+    padding: 15px 16px;
+    background: #fff;
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    line-height: 140%;
+    border-radius: 8px;
+    border: 1px solid #A4A4A3;
+}
+
+.popup-form-row input::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+ 
+}
+
+.popup-form-agreement {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 216px;
+}
+
+.popup-form-agreement p {
+    margin-left: 26px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 130%;
+  
+}
+
+.popup .btn-style {
+    margin: 30px auto 0;
+    padding: 18px;
+    display: block;
+    width: 260px;
+}
+
+#popup-success button.is-close {
+    display: none;
+}
+
+.popup-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.popup-success .check-icon {
+    margin-bottom: 70px;
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border: 1px dashed #A4A4A3;
+    border-radius: 50%;
+
+    @include breakpoint(md) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.popup-success .check-icon::before {
+    content: '';
+    background: url('../images/check.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 80px;
+    height: 80px;
+
+    @include breakpoint(md) {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+.popup-success .popup-subtitle {
+    max-width: 320px;
+}
+
+#popup-member {
+
+    .popup-title {
+        margin: 0 auto 30px;
+        max-width: 312px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+
+        @include breakpoint(md) {
+            max-width: 468px;
+        }
+    }
+
+ 
+    .popup-subtitle {
+        margin: 0 auto 30px;
+        max-width: 312px;
+
+        @include breakpoint(md) {
+            max-width: 468px;
+        }
+    }
+
+    .popup-form-wrap {
+        
+        @include breakpoint(md) {
+            max-width: 584px;
+        }
+    }
+
+    .popup-form-row {
+
+        @include breakpoint(md) {
+            margin: 0 0 20px;
+            width: calc(50% - 5px);
+            max-width: 100%;
+        }
+    }
+
+}

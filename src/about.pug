@@ -1,0 +1,58 @@
+---
+title: vitality | Главная
+bodyClass: about-page
+
+yandexMap: false
+---
+
+extends includes/_page
+
+block main
+    section.section-about.section
+        .about
+            .flag
+                picture
+                    source(srcset="assets/images/flag-19201.png"  media="(min-width: 1700px)")
+                    source(srcset="assets/images/flag-19201.png"  media="(min-width: 1440px)") 
+                    source(srcset="assets/images/flag-1024.png"  media="(min-width: 1024px)") 
+                    source(srcset="assets/images/flag-tablet.png"  media="(min-width: 744px)") 
+                    +img('flag-mob.png')
+            .container
+                .about__text
+                    h1.page-title #[span VITALITY ] OF NATURE
+                    .about__description Бренд из Нидерландов, воплощающий силу и энергию живительной природы     
+                
+                .about__list 
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab1.svg 
+                        .about__title  Связь научных открытий и витаминов  
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab2.svg 
+                        .about__title Клинически проверенные ингредиенты 
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab3.svg 
+                        .about__title  Максимально биологически активные формулы
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab4.svg 
+                        .about__title  Никакого пуха или ненужных наполнителей
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab5.svg 
+                        .about__title  Натуральные и усвояемые витамины 
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab6.svg 
+                        .about__title  Овощные капсулы с упаковкой FrostProtect
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab7.svg 
+                        .about__title  Липосомальная доставка, медленное высвобождение
+                    .about__item 
+                        .about__icon 
+                            include assets/images/ab8.svg 
+                        .about__title  Доступные по цене пищевые добавки
+    
