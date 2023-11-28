@@ -1,62 +1,23 @@
 ---
 title: vitality | Главная
 bodyClass: main-page
-yandexMap: true
 ---
 
 extends includes/_page
 
 block main
-    .preloader
-        .preload-logo
-            svg(width="73" height="82" viewBox="0 0 73 82" fill="none" xmlns="http://www.w3.org/2000/svg")
-                rect.preload-right.preload-right-2(width="72.5127" height="20.2023" transform="matrix(0.867304 -0.497779 0.500413 0.865787 0 54.1875)" fill="#4EB08C")
-                rect.preload-left(width="72.5124" height="20.2024" transform="matrix(0.866784 0.498683 -0.501318 0.865263 10.125 18.0664)" fill="#4EB08C")
-                rect.preload-middle(x="45.5781" y="34.0625" width="47.9385" height="20.2556" transform="rotate(90 45.5781 34.0625)" fill="#4EB08C")
-                ellipse.preload-circle(cx="36.7145" cy="12.6154" rx="12.6598" ry="12.6154" fill="#4EB08C")
+    //- .preloader
+    //-     .preload-logo
+    //-         svg(width="73" height="82" viewBox="0 0 73 82" fill="none" xmlns="http://www.w3.org/2000/svg")
+    //-             rect.preload-right.preload-right-2(width="72.5127" height="20.2023" transform="matrix(0.867304 -0.497779 0.500413 0.865787 0 54.1875)" fill="#4EB08C")
+    //-             rect.preload-left(width="72.5124" height="20.2024" transform="matrix(0.866784 0.498683 -0.501318 0.865263 10.125 18.0664)" fill="#4EB08C")
+    //-             rect.preload-middle(x="45.5781" y="34.0625" width="47.9385" height="20.2556" transform="rotate(90 45.5781 34.0625)" fill="#4EB08C")
+    //-             ellipse.preload-circle(cx="36.7145" cy="12.6154" rx="12.6598" ry="12.6154" fill="#4EB08C")
           
-    section.section-hero.section
-        .hero
-            
-            .hero__inner
-                    //- .container
-                
-                    .hero-text
-                        h1.page-title #[span BIO]-добавки для жизни
-                        .hero__description Комплекс витаминов, минералов и пищевых добавок для жителей современных мегаполисов из Нидерландов     
-                    .hero__btn
-                        a(href="").btn.btn--green Подробнее
-            .hero__bottom 
-                    .hero__circle-wrapper
-                        .hero__circle       
-                    .hero__pictures 
-                        .hero__picture-logo-right
-                            +img('logo-right.svg')
-                        .hero__picture-logo-left
-                            +img('logo-left.svg')
-                        .hero__picture-right
-                            +img('pills-right.png')
-                        .hero__picture-left 
-                            +img('pills-left.png')
-                        .hero__picture-hand
-                            picture
-                                //-  source(srcset="assets/images/hand2.png"  media="(min-width: 1700px)")
-                                source(srcset="assets/images/hand-1920.png"  media="(min-width: 1440px)") 
-                                source(srcset="assets/images/hand-1024.png"  media="(min-width: 1024px)") 
-                                source(srcset="assets/images/hand-tablet.png"  media="(min-width: 744px)") 
-                                +img('hand.png')
+    section.section.section-hero
+        .hero-bg
+            +img('subtract.png')
 
-            .hero__partners-wrapper
-                    //- .container
-                    .hero__partners
-                        .hero__partners-imgs 
-                            .hero__partners-img
-                                +img('part1.png') 
-                            .hero__partners-img
-                                +img('part2.png') 
-                            .hero__partners-img
-                                +img('part3.png')     
-                        .hero__partners-text #[span Эксклюзивно] ДЛЯ СЕТЕЙ АПТЕК  
-
-                    
-                    
+        .hero-content    
+            h1 BIO-добавки для жизни
+            p Комплекс витаминов, минералов и пищевых добавок для жителей современных мегаполисов из Нидерландов

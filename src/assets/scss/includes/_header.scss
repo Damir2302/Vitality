@@ -173,7 +173,6 @@
     font-weight: 400;
     line-height: normal;
     background: $green;
-    padding: 12px 20px;
 
     &+.nav-list__item {
         margin-top: 8px;
@@ -230,7 +229,13 @@
     }
 }
 
+.nav-list__link {
 
+    @include breakpointMax(md) {
+        padding: 12px 20px;
+        width: 100%;
+    }
+}
 
 
 .header__phone {
