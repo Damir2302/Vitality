@@ -15,9 +15,109 @@ block main
     //-             ellipse.preload-circle(cx="36.7145" cy="12.6154" rx="12.6598" ry="12.6154" fill="#4EB08C")
           
     section.section.section-hero
-        .hero-bg
-            +img('subtract.png')
 
-        .hero-content    
-            h1 BIO-добавки для жизни
-            p Комплекс витаминов, минералов и пищевых добавок для жителей современных мегаполисов из Нидерландов
+        .hero-bg
+            .hero-wrap
+                +img('subtract.png')
+
+        .container
+            .hero-content
+                h1.hero-content__title BIO-добавки для жизни
+                .hero-content__text
+                    p Комплекс витаминов, минералов и пищевых добавок для жителей современных мегаполисов из Нидерландов
+
+    section.section.section-staff
+
+        .container
+
+            .aspect
+
+                .aspect__title.title
+                    span VITALITY
+                    | OF NATURE
+                
+                .aspect__text.subtitle Клинически проверенные ингридиенты для создания максимально биологических активных формул!
+
+                .aspect-block
+                    
+                    .aspect-block__item
+                        .aspect-block__item-img
+                            div
+                                +img('image_63.jpg')
+                        .aspect-block__item-title Vita mk7
+                    
+                    .aspect-block__item
+                        .aspect-block__item-img
+                            div
+                                +img('image_64.jpg')
+                        .aspect-block__item-title Bioperine
+                    
+                    .aspect-block__item
+                        .aspect-block__item-img
+                            div
+                                +img('image_65.jpg')
+                        .aspect-block__item-title quatrefolic
+                    
+                    .aspect-block__item
+                        .aspect-block__item-img
+                            div
+                                +img('image_66.jpg')
+                        .aspect-block__item-title biomimetic l-arginine
+
+    section.section.section-brand
+
+        picture.section-brand-bg
+            source(media="(min-width: 1440px)", srcset="assets/images/nederland_1440p.png")
+            source(media="(min-width: 1024px)", srcset="assets/images/nederland_1024p.png")
+            source(media="(min-width: 744px)", srcset="assets/images/nederland_744p.png")
+            img(src="assets/images/nederland_320p.png", alt="img")
+
+        .container
+
+            .brand-title.title Мы это
+
+            .brand-subtitle.subtitle Бренд из Нидерландов, воплощающий силу и энергию живительной природы
+
+            .brand
+
+                .brand__item
+                    .brand__item-icon
+                        +img('006-science.svg')
+                    .brand__item-title Связь научных открытий и витаминов
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('005-heart-rate.svg')
+                    .brand__item-title Натуральные и усвояемые витамины
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('007-flask.svg')
+                    .brand__item-title Клинически проверенные ингредиенты
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('008-carrot.svg')
+                    .brand__item-title Овощные капсулы с упаковкой FrostProtect
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('001-dna.svg')
+                    .brand__item-title Максимально биологически активные формулы
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('002-block.svg')
+                    .brand__item-title Никакого пуха или ненужных наполнителей
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('003-reduce-time.svg')
+                    .brand__item-title Липосомальная доставка, медленное высвобождение
+                
+                .brand__item
+                    .brand__item-icon
+                        +img('004-wallet.svg')
+                    .brand__item-title Доступные по цене пищевые добавки
+
+            a(href="product1.html").brand-btn.btn.btn--green Продукция бренда

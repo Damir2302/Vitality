@@ -1,74 +1,60 @@
 ---
 title: vitality | Контакты 
-bodyClass: buy-page
+bodyClass: contacts-page
 bodyStyle: "background: #468A5A"
-yandexMap: false
+yandexMap: true
 ---
 
 extends includes/_page
 
 block main
+
     section.section-buy.section-contacts.section
-        .container   
-            .contacts 
-                h1.page-title  Контакты
+
+        .container
+    
+            h1.page-title  Контакты
+
+            .contacts
+
                 .contacts__info 
-                    p Официальный представитель Vitality в РФ: 
-                        span ООО «ГАГАРИН»
+                    p Официальный представитель Vitality в РФ:
+                        span ПАО «Аптечная сеть 36,6»
                     p Фактический адрес: 
-                        span 127018, Россия, г. Москва, Большая Садовая 5 к 1
+                        span 121108, Россия, г. Москва, улица Ивана Франко, 8
                     p Юридический адрес: 
-                        span 127018, Россия, г. Москва, Муниципальный округ Бутырский, ул. Складочная, д 1, стр. 18, этаж 5, оф. 10/10
-                    p ИНН/КПП:  
-                        span 9715425907
-                .contacts__list 
-                    .contacts__item 
-                        .contacts__item-icon 
-                            include assets/images/telephone.svg
-                        .contacts__item-text
-                            .contacts__item-title Контактный телефон
-                            a(href="tel:+8 (800) 100-45-69").contacts__item-value +8 (800) 100-45-69
-                    .contacts__item 
-                        .contacts__item-icon 
-                            include assets/images/mail.svg
-                        .contacts__item-text
-                            .contacts__item-title Почта
-                            a(href="mailto:info@gagarin.tech").contacts__item-value info@gagarin.tech
-                //- .contacts__marquee 
-        .contacts__bottom        
-            .section-marquee
-                .marquee
-                    .marquee-content
-                        .marquee-item НАУКА
-                        .marquee-item
-                            .marquee-icon  
-                                include assets/images/logo-marq.svg
-                        .marquee-item ЗДОРОВЬЕ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                        .marquee-item ИННОВАЦИИ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                    .marquee-content
-                        .marquee-item НАУКА
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                        .marquee-item ЗДОРОВЬЕ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                        .marquee-item ИННОВАЦИИ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-            .footer__devs
-                    a(href="https://di-project.studio/") Разработка сайта
-                    span Di-Project
-            
+                        span 109125, г. Москва, муниципальный округ Текстильщики вн.тер.г., ул. Саратовская, д.18/10, этаж 1, помещение 1, комната 1, офис № 1, Российская Федерация.
+                    p ИНН:  
+                        span 7722266450
+                    p КПП: 
+                        span 772201001
+                    p ОГРН: 
+                        span 1027722000239
+
+                .contacts__map
+                    #contacts-map(width="100%" height="100%")
+
+            .contacts__list 
+                .contacts__item 
+                    .contacts__item-icon 
+                        include assets/images/telephone.svg
+                    .contacts__item-text
+                        .contacts__item-title Контактный телефон
+                        a(href="tel:+8 (800) 100-45-69").contacts__item-value +8 (800) 100-45-69
+                .contacts__item 
+                    .contacts__item-icon 
+                        include assets/images/mail.svg
+                    .contacts__item-text
+                        .contacts__item-title Почта
+                        a(href="mailto:info@gagarin.tech").contacts__item-value info@gagarin.tech
+
+    .footer__devs
+
+        .container
+        
+            a(href="https://di-project.studio/") Разработка сайта
+            span Di-Project
 
 
-                                    
-                                    
+                            
+                            

@@ -1,3 +1,7 @@
+.product-page .header__phone path {
+    fill: #fff;
+}
+
 .section-product {
     @include breakpoint(md) {
         padding-top: 17px;

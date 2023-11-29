@@ -1,45 +1,396 @@
-.section-hero {
-    position: relative;
-    width: 100%;
+.main-page .section {
     min-height: initial;
-    overflow: visible;
 }
 
-.section-hero::after {
-    content: "";
-    background: url('../images/union.png') no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 100%;
-    display: block;
-    width: 59px;
-    height: 21px;
-    z-index: 10;
+.section-hero {
+
+    @include breakpointMax(md) {
+        padding-bottom: 22px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 8px;
+    }
 }
 
 .hero-bg {
-    position: absolute;
-    right: -92px;
-    height: 190px;
+    position: relative;
+    width: 100%;
 }
 
 .hero-bg::before {
+    content: "";
+    background: url('../images/chevron-down.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 182px;
+    left: 50%;
+    display: block;
+    width: 11px;
+    height: 11px;
+    transform: translateX(-50%);
+    z-index: 11;
+
+    @include breakpoint(md) {
+        top: 420px;
+        width: 24px;
+        height: 24px;
+    }
+
+    @include breakpoint(xl) {
+        top: 612px;
+    }
+}
+
+.hero-bg::after {
+    content: "";
+    background: url('../images/union.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 172px;
+    left: 50%;
+    display: block;
+    width: 59px;
+    height: 21px;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: 399px;
+        width: 138px;
+        height: 49px;
+    }
+
+    @include breakpoint(xl) {
+        top: 592px;
+    }
+}
+
+.hero-wrap {
+    position: absolute;
+    right: -100px;
+    height: 190px;
+
+    @include breakpoint(md) {
+        right: -240px;
+        height: 440px;
+    }
+
+    @include breakpoint(lg) {
+        right: 0;
+    }
+
+    @include breakpoint(xl) {
+        height: 640px;
+    }
+}
+
+.hero-wrap::before {
     content: "";
     background-color: #00A90E;
     position: absolute;
     right: 100%;
     display: block;
-    width: 100%;
+    width: 110%;
     height: calc(100% - 6px);
     z-index: -1;
+
+    @include breakpoint(md) {
+        width: 100vw;
+        height: calc(100% - 14px);
+    }
+
+    @include breakpoint(xl) {
+        height: calc(100% - 21px);
+    }
 }
 
-.hero-bg img {
+.hero-wrap img {
     height: 100%;
     object-fit: cover;
 }
 
 .hero-content {
+    padding: 46px 0 30px;
     position: relative;
+    max-width: 138px;
     z-index: 1;
+
+    @include breakpoint(md) {
+        padding: 117px 0;
+        max-width: 320px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 0 0 146px;
+        display: flex;
+        flex-direction: column;
+        max-width: 460px;
+        min-height: 640px;
+    }
+}
+
+.hero-content__title {
+    font-family: $furore;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 95%;
+
+    @include breakpoint(md) {
+        font-size: 42px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: auto;
+        font-size: 60px;
+    }
+}
+
+.hero-content__text {
+    margin-top: 10px;
+    font-family: $jost;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 140%;
+
+    @include breakpoint(md) {
+        margin-top: 24px;
+        font-size: 22px;
+    }
+}
+
+.section-staff {
+    padding: 25px 0;
+
+    @include breakpoint(md) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 80px 0;
+    }
+}
+
+.aspect__title {
+    max-width: 110px;
+
+    @include breakpoint(md) {
+        max-width: 256px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 400px;
+    }
+}
+
+.aspect__title span {
+    display: block;
+    color: #4EB08C;
+}
+
+.aspect__text {
+    max-width: 242px;
+
+    @include breakpoint(md) {
+        margin-top: 32px;
+        max-width: 564px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 100%;
+    }
+}
+
+.aspect-block {
+    margin-top: 18px;
+    display: flex;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 48px;
+    }
+}
+
+.aspect-block__item {
+    width: 25%;
+}
+
+.aspect-block__item ~ .aspect-block__item {
+    margin-left: 5px;
+
+    @include breakpoint(md) {
+        margin-left: 10px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 27px;
+    }
+}
+
+.aspect-block__item-img div {
+    @include ratio(73, 73);
+}
+
+.aspect-block__item-img img {
+    position: absolute;
+}
+
+.aspect-block__item-title {
+    margin-top: 8px;
+    max-width: 50px;
+    font-family: $furore;
+    font-size: 7px;
+    line-height: normal;
+    color: #212B23;
+
+    @include breakpoint(md) {
+        margin-top: 20px;
+        max-width: 116px;
+        font-size: 16px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 30px;
+        max-width: 100%;
+        font-size: 24px;
+    }
+}
+
+.section-brand {
+    padding: 25px 0;
+    background-color: #fff;
+    position: relative;
+
+    @include breakpoint(md) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 80px 0;
+    }
+}
+
+.section-brand-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.brand-subtitle {
+    max-width: 242px;
+
+    @include breakpoint(md) {
+        max-width: 562px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 100%;
+    }
+}
+
+.brand {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+
+    @include breakpoint(md) {
+        margin-top: 48px;
+        column-gap: 48px;
+        row-gap: 25px;
+    }
+
+    @include breakpoint(lg) {
+        column-gap: 30px;
+        row-gap: 48px;
+        max-width: 944px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 40px;
+        max-width: 100%;
+    }
+}
+
+.brand__item {
+    width: 116px;
+
+    @include breakpoint(md) {
+        width: 268px;
+    }
+
+    @include breakpoint(lg) {
+        width: 170px;
+    }
+
+    @include breakpoint(xl) {
+        width: 270px;
+    }
+}
+
+.brand__item-icon {
+    margin-bottom: 7px;
+    display: flex;
+    width: 17px;
+    height: 17px;
+
+    @include breakpoint(md) {
+        margin-bottom: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    @include breakpoint(xl) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.brand__item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.brand__item-title {
+    font-family: $jost;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: #212B23;
+
+    @include breakpoint(md) {
+        font-size: 16px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.brand-btn {
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 25px;
+    font-family: $jost;
+    font-weight: 400;
+    font-size: 9px;
+
+    @include breakpoint(md) {
+        margin-top: 48px;
+        width: 400px;
+        height: 54px;
+        font-size: 20px;
+    }
 }

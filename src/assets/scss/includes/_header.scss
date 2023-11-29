@@ -1,76 +1,47 @@
-#page {
-    --offset-top: 60px;
-    --header-height: 73px;
-
-    @include breakpoint(md) {
-        --offset-top: 40px;
-        --header-height: 92px;
-    }
-
-    @include breakpoint(xl) {
-        --header-height: 80px;
-    }
-}
-
 .header {
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
-    padding: 24px 0;
+    padding: 7px 0;
     z-index: 10;
 
-
     @include breakpoint(md) {
+        padding: 27px 0;
         height: auto;
-
     }
 
     @include breakpoint(lg) {
-        padding: 20px 0;
+        padding: 24px 0;
     }
+}
 
-    @include breakpoint(xl) {
-        padding: 30px 0;
-
-    }
-
-
-    &.opened-menu {
-        .header__menu {
-            z-index: 12;
-
-
-            transform: translateX(0);
-        }
-    }
-
-    .nav-list__item {
-        display: flex;
-        justify-content: center;
-    }
+.main-page .header {
+    background: linear-gradient(90deg, #EAFDF5 33.16%, #FFF 100%);
 }
 
 .header__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: 100%;
+
+    @include breakpoint(md) {
+        justify-content: space-between;
+    }
 
     @include breakpoint(lg) {
         justify-content: start;
     }
-
-    @include breakpoint(xl) {}
-
 }
 
 .header__logo {
-    max-width: 112px;
+    width: 53px;
+    height: 12px;
     display: flex;
 
     svg {
         width: 100%;
+        height: 100%;
     }
 
     img {
@@ -78,9 +49,15 @@
         width: 100%;
     }
 
-    @include breakpoint(md) {}
+    @include breakpoint(md) {
+        width: 124px;
+        height: 29px;
+    }
 
     @include breakpoint(lg) {
+        width: 146px;
+        height: 35px;
+
         path {
             transition: .4s;
         }
@@ -108,31 +85,17 @@
     }
 }
 
-
-
-
-
 .header__menu {
-    position: fixed;
-    right: 0;
-    width: calc(100% / 4 * 3);
-    top: 0;
-    bottom: 0;
-
-    padding: 25px 10px;
-    transform: translateX(100%);
-    transition: .4s;
-    background: var(--gradient-light-green-background, linear-gradient(90deg, #EAFDF5 33.16%, #FFF 100%));
-    display: flex;
-    flex-direction: column;
+    margin-left: 20px;
 
     @include breakpoint(md) {
-        display: block;
-        position: static;
-        transform: unset;
-        width: auto;
+        margin-left: 0;
         padding: 0;
         background: transparent;
+        position: static;
+        display: block;
+        width: auto;
+        transform: unset;
     }
 
     @include breakpoint(lg) {
@@ -143,83 +106,22 @@
     @include breakpoint(xl) {}
 }
 
-.header__menu-bottom--mobile {
-    margin-top: auto;
-    justify-content: center;
-    display: flex;
-
-    @include breakpoint(md) {
-        display: none;
-    }
-}
-
-.header__menu-top--mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-
-    @include breakpoint(md) {
-        display: none;
-    }
-}
-
 .nav-list__item {
-    font-size: 16px;
-    color: $white;
-
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    background: $green;
-
-    &+.nav-list__item {
-        margin-top: 8px;
-    }
+    padding: 0 8px;
+    background: transparent;
+    position: relative;
+    display: flex;
 
     @include breakpoint(md) {
-        background: transparent;
-        padding: 0;
-        font-size: 14px;
-        color: $black;
-        padding: 0 12px;
-        position: relative;
-
-        &:after {
-            content: '/';
-            color: rgba(78, 176, 140, 0.40);
-            position: absolute;
-            right: 0;
-            transform: translateX(48%);
-        }
-
-        &+.nav-list__item {
-            margin-top: 0;
-
-        }
-
-        &:last-child {
-            padding-right: 0;
-
-            &:after {
-                display: none;
-            }
-        }
-
-        &:first-child {
-            padding-left: 0;
-
-        }
+        padding: 0 20px;
     }
 
     @include breakpoint(lg) {
-        padding: 0 16px;
+        padding: 0 24px;
         transition: 0.5s;
 
         &:hover {
             color: $green-hover;
-
         }
     }
 
@@ -227,31 +129,60 @@
         font-size: 16px;
         padding: 0 24px;
     }
+
+    &:after {
+        content: '/';
+        color: rgba(78, 176, 140, 0.40);
+        position: absolute;
+        right: 0;
+        transform: translateX(48%);
+    }
+
+    &+.nav-list__item {
+        margin-top: 0;
+
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &:first-child {
+        padding-left: 0;
+
+    }
 }
 
 .nav-list__link {
+    font-family: $jost;
+    font-size: 7px;
+    color: #fff;
 
-    @include breakpointMax(md) {
-        padding: 12px 20px;
-        width: 100%;
+    @include breakpoint(md) {
+        font-size: 16px;
     }
 }
 
+.main-page .nav-list__link {
+    color: #212B23;
+}
 
 .header__phone {
-    margin-left: 10px;
+    margin-left: auto;
     color: $black;
-    font-size: 14px;
+    font-family: $jost;
+    font-size: 9px;
+    line-height: 1;
     display: flex;
-
-    .header__phone-icon {
-        margin-right: 2px;
-    }
+    align-items: center;
 
     @include breakpoint(md) {
-        .header__phone-icon {
-            margin-right: 8px;
-        }
+        margin-left: 0;
+        font-size: 16px;
     }
 
     @include breakpoint(lg) {
@@ -271,10 +202,37 @@
                 fill: #455147;
             }
         }
-    }
+    }  
 
     @include breakpoint(xl) {
         font-size: 16px;
+    } 
+}
+
+.main-page .header__phone {
+    color: #212b23;
+}
+
+.header__phone-icon {
+    margin-left: 0;
+    margin-right: 2px;
+    width: 9px;
+    height: 9px;
+
+    @include breakpoint(md) {
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.header__phone-icon svg {
+    width: 9px;
+    height: 9px;
+
+    @include breakpoint(md) {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -287,11 +245,7 @@
 }
 
 .nav-list {
-    text-align: center;
-
-    @include breakpoint(md) {
-        display: flex;
-    }
+    display: flex;
 }
 
 .buy-page,
@@ -303,6 +257,7 @@
         }
     }
     .header__logo {
+
         path {
             fill: #FFF;
         }
@@ -322,7 +277,7 @@
     }
 
     .nav-list__item {
-        color: #FFF;
+        color: #212B23;
 
         &::after {
             color: rgba(255, 255, 255, 0.40);
