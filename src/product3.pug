@@ -11,6 +11,24 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod3.png')
+                        .product__shadow(style="")
+                            +img('shad3.png')
+                    .product__info  
+                        .product__title  Calcium magnesium zinc & d3
+                        .product__labels 
+                            .product__label Кости
+                            .product__label Мышцы
+                            .product__label Рост
+                    
+                        .product__text 
+                            p  При нервном напряжении и стрессах содержание цинка в организме резко сокращается и требует восполнения. Кальций, магний плюс цинк — это формула, содержащая три минерала в одном и содействующая укреплению нервной системы и мышц.
+                            p Наш БАД - это очень сильный комплекс кальция, магния, цинка и витамина Д3, оказывающий позитивный эффект на организм, усиленный добавлением минералов.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,19 +106,3 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod3.png')
-                        .product__shadow(style="")
-                            +img('shad3.png')
-                    .product__info  
-                        .product__title  Calcium magnesium zinc & d3
-                        .product__labels 
-                            .product__label Кости
-                            .product__label Мышцы
-                            .product__label Рост
-                    
-                        .product__text 
-                            p  При нервном напряжении и стрессах содержание цинка в организме резко сокращается и требует восполнения. Кальций, магний плюс цинк — это формула, содержащая три минерала в одном и содействующая укреплению нервной системы и мышц.
-                            p Наш БАД - это очень сильный комплекс кальция, магния, цинка и витамина Д3, оказывающий позитивный эффект на организм, усиленный добавлением минералов.

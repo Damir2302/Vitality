@@ -11,6 +11,24 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod12.png')
+                        .product__shadow(style="")
+                            +img('shad12.png')
+                    .product__info  
+                        .product__title  ZINC bisglycinate
+                        .product__labels 
+                            .product__label Здоровая кожа
+                            .product__label Иммунитет
+                            .product__label Рост
+                    
+                        .product__text 
+                            p Людям не приходится долго ломать голову над вопросом, где провести выходные или куда сходить вечером, чтобы найти вдохновение. Нельзя и забывать о внешней красоте.
+                            p Сохранить здоровье кожи, ногтей волос поможет ВИТАЛИТИ ЦИНК БИСГЛИЦИНАТ.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,19 +106,4 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod12.png')
-                        .product__shadow(style="")
-                            +img('shad12.png')
-                    .product__info  
-                        .product__title  ZINC bisglycinate
-                        .product__labels 
-                            .product__label Здоровая кожа
-                            .product__label Иммунитет
-                            .product__label Рост
-                    
-                        .product__text 
-                            p Людям не приходится долго ломать голову над вопросом, где провести выходные или куда сходить вечером, чтобы найти вдохновение. Нельзя и забывать о внешней красоте.
-                            p Сохранить здоровье кожи, ногтей волос поможет ВИТАЛИТИ ЦИНК БИСГЛИЦИНАТ.
+                

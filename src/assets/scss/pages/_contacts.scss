@@ -14,6 +14,10 @@
     fill: #fff;
 }
 
+.contacts-page .nav-list__item:after {
+    color: rgba(255,255,255,.4);
+}
+
 .contacts-page .page-title {
     margin-bottom: 17px;
 }
@@ -23,115 +27,228 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: calc(100vh - 94px);
+
+    @include breakpoint(md) {
+        min-height: calc(100vh - 158px);
+    }
+
+    @include breakpoint(lg) {
+        min-height: calc(100vh - 154px);
+    }
+
+    @include breakpoint(lg) {
+        min-height: calc(100vh - 158px);
+    }
+}
+
+.section-contacts .page-title {
+    margin-bottom: 40px;
+    color: #fff;
+
+    @include breakpoint(md) {
+        font-size: 64px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 42px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 48px;
+        font-size: 64px;
+    }
+}
+
+.contacts {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__wrap {
+
+    @include breakpoint(lg) {
+        width: calc(50% - 20px);
+    }
 }
 
 .contacts__info {
-    color: rgba(255, 255, 255, 0.80);
+    margin-bottom: 10px;
+    font-weight: 400;
     font-size: 12px;
     font-style: normal;
-    font-weight: 400;
     line-height: 140%;
-    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.80);
 
-    span {
-        color: #fff
-    }
-
-    p+p {
-        margin-top: 12px;
+    @include breakpoint(md) {
+        margin-bottom: 45px;
+        font-size: 16px;
     }
 
     @include breakpoint(lg) {
         font-size: 14px;
-        max-width: calc((100% / 6 * 3) - 15px);
-
-        p+p {
-            margin-top: 8px;
-        }
+        line-height: 140%;
     }
 
     @include breakpoint(xl) {
         font-size: 20px;
-margin-bottom: 48px;
-        p+p {
-            margin-top: 12px;
-        }
+    }
+}
+
+.contacts__info span {
+    color: #fff;
+}
+
+.contacts__info p + p {
+    margin-top: 12px;
+
+    @include breakpoint(lg) {
+        margin-top: 8px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 12px;
+    }
+}
+
+.contacts__map {
+    height: 188px;
+
+    @include breakpoint(md) {
+        height: 320px;
+    }
+
+    @include breakpoint(lg) {
+        width: calc(50% - 20px);
+    }
+
+    @include breakpoint(xl) {
+        height: 430px;
     }
 }
 
 .contacts__list {
-    margin-bottom: 37px;
+    margin: 10px 0 38px;
 
     @include breakpoint(md) {
-        margin-bottom: 234px;
+        margin: 45px 0 38px;
     }
 
     @include breakpoint(lg) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 30px;
-        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(xl) {
+        margin: 80px 0 100px;
     }
 }
 
 .contacts__item {
-    color: rgba(255, 255, 255, 0.80);
-    font-size: 16px;
+    display: flex;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    color: rgba(255, 255, 255, 0.80);
 
-    &+.contacts__item {
+    @include breakpoint(lg) {
+        width: calc(50% - 20px);
+    }
+}
+
+.contacts__item ~ .contacts__item {
+    margin-top: 17px;
+
+    @include breakpoint(md) {
         margin-top: 40px;
     }
 
-    @include breakpoint(md) {
-        display: flex;
-    }
-
     @include breakpoint(lg) {
-        &+.contacts__item {
-            margin-top: 0;
-        }
-
+        margin-top: 0;
     }
-   
 }
 
 .contacts__item-icon {
-    margin-bottom: 12px;
-    display: flex;
-    width: 72px;
-    height: 72px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-right: 7px;
     background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 31px;
+    height: 31px;
     border-radius: 50%;
 
     @include breakpoint(md) {
         margin-right: 16px;
-        flex: 0 0 auto;
+        width: 72px;
+        height: 72px;
     }
 
     @include breakpoint(lg) {
+        margin-right: 8px;
         width: 48px;
         height: 48px;
-        padding: 12px;
-
-        svg {}
     }
+
     @include breakpoint(xl) {
+        margin-right: 16px;
         width: 72px;
-    height: 72px;
+        height: 72px;
+    }
+}
+
+.contacts__item-icon svg {
+    width: 15px;
+    height: 15px;
+
+    @include breakpoint(md) {
+        width: 36px;
+        height: 36px;
+    }
+
+    @include breakpoint(lg) {
+        width: 24px;
+        height: 24px;
+    }
+
+    @include breakpoint(xl) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.contacts__item-title {
+    font-size: 7px;
+    font-weight: 400;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.80);
+
+    @include breakpoint(md) {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 8px;
+        font-size: 20px;
     }
 }
 
 .contacts__item-value {
     color: #FFF;
     font-family: $furore;
-    font-size: 30px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 400;
     line-height: normal;
 
@@ -142,128 +259,37 @@ margin-bottom: 48px;
     @include breakpoint(lg) {
         font-size: 24px;
     }
+
     @include breakpoint(xl) {
         font-size: 32px;
-
-    }
-}
-
-.contacts__item-title {
-    color: rgba(255, 255, 255, 0.80);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    margin-bottom: 8px;
-
-    /* 22.4px */
-    @include breakpoint(lg) {
-        margin-bottom: 2px;
-        font-size: 14px;
-    }
-    @include breakpoint(xl) {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-}
-
-.marquee {
-    width: 100%;
-    grid-column-gap: 1rem;
-    background: linear-gradient(90deg, #EAFDF5 33.16%, #FFF 100%);
-    display: flex;
-    overflow: hidden;
-    padding: 24px 0;
-    white-space: nowrap;
-    transform: rotateZ(-1.5deg);
-
-    @include breakpoint(lg) {
-        padding: 32px 0;
-    }
-}
-
-
-
-.section-marquee {
-    margin-bottom: 45px;
-
-    @include breakpoint(lg) {
-        margin-bottom: 17px;
-    }
-    @include breakpoint(xl) {
-        margin-bottom: 70px;
-    }
-}
-
-.marquee-icon {
-    @include breakpoint(lg) {
-     svg {
-        height: 44px;
-    }
-   
-    }
-    @include breakpoint(xl) {
-        svg {
-           height: 66px;
-       }
-      
-       }
-}
-
-.marquee-item {
-    color: #212B23;
-    font-family: $furore;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 94.8%;
-    display: flex;
-    align-items: center;
-
-    @include breakpoint(md) {
-        font-size: 56px;
-    }
-
-    @include breakpoint(lg) {
-        font-size: 36px;
-    }
-    @include breakpoint(xl) {
-        font-size: 56px;
-    }
-}
-
-
-.marquee-content {
-    min-width: 100%;
-    grid-column-gap: 24px;
-    flex: none;
-    justify-content: space-around;
-    display: flex;
-    animation: scroll 10s linear infinite;
-}
-
-
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(-100% - 1rem));
     }
 }
 
 .footer__devs {
-    text-align: center;
-    color: #FFF;
-    font-size: 16px;
+    padding-bottom: 24px;
+    font-size: 7px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1;
+    text-align: center;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.80);
 
-    span {
-        display: block;
+    @include breakpoint(md) {
+        font-size: 16px;
     }
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.footer__devs span {
+    margin-top: 4px;
+    display: block;
+    color: #FFF;
 }

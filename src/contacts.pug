@@ -9,30 +9,31 @@ extends includes/_page
 
 block main
 
-    section.section-buy.section-contacts.section
+    section.section-contacts.section
 
         .container
-    
-            h1.page-title  Контакты
 
             .contacts
+                
+                .contacts__wrap
+                    h1.page-title  Контакты
 
-                .contacts__info 
-                    p Официальный представитель Vitality в РФ:
-                        span ПАО «Аптечная сеть 36,6»
-                    p Фактический адрес: 
-                        span 121108, Россия, г. Москва, улица Ивана Франко, 8
-                    p Юридический адрес: 
-                        span 109125, г. Москва, муниципальный округ Текстильщики вн.тер.г., ул. Саратовская, д.18/10, этаж 1, помещение 1, комната 1, офис № 1, Российская Федерация.
-                    p ИНН:  
-                        span 7722266450
-                    p КПП: 
-                        span 772201001
-                    p ОГРН: 
-                        span 1027722000239
+                    .contacts__info 
+                        p Официальный представитель Vitality в РФ:
+                            span ПАО «Аптечная сеть 36,6»
+                        p Фактический адрес: 
+                            span 121108, Россия, г. Москва, улица Ивана Франко, 8
+                        p Юридический адрес: 
+                            span 109125, г. Москва, муниципальный округ Текстильщики вн.тер.г., ул. Саратовская, д.18/10, этаж 1, помещение 1, комната 1, офис № 1, Российская Федерация.
+                        p ИНН:  
+                            span 7722266450
+                        p КПП: 
+                            span 772201001
+                        p ОГРН: 
+                            span 1027722000239
 
                 .contacts__map
-                    #contacts-map(width="100%" height="100%")
+                    #contacts-map(data-coord="55.727546,37.450161" style="wdith:100%; height:100%")
 
             .contacts__list 
                 .contacts__item 
@@ -40,13 +41,13 @@ block main
                         include assets/images/telephone.svg
                     .contacts__item-text
                         .contacts__item-title Контактный телефон
-                        a(href="tel:+8 (800) 100-45-69").contacts__item-value +8 (800) 100-45-69
+                        a.contacts__item-value(href="tel:+8 (800) 100-45-69") +8 (800) 100-45-69
                 .contacts__item 
                     .contacts__item-icon 
                         include assets/images/mail.svg
                     .contacts__item-text
                         .contacts__item-title Почта
-                        a(href="mailto:info@gagarin.tech").contacts__item-value info@gagarin.tech
+                        a.contacts__item-value(href="mailto:info@gagarin.tech") info@gagarin.tech
 
     .footer__devs
 

@@ -11,6 +11,24 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('PROD2.png')
+                        .product__shadow
+                            +img('shad2.png')
+                    .product__info  
+                        .product__title  K2 VITAMIN
+                        .product__labels 
+                            .product__label Кости
+                            .product__label Сосуды
+                    
+                        .product__text 
+                            p Исследователи выяснили, что жители крупных городов более подвержены психологическому напряжению и депрессии. Всё дело в быстром ритме, который может привести к выгоранию и опустошённости. 
+                            p От сердечных заболеваний поможет ВИТАЛИТИ ВИТАМИН K2 MK-7.
+                                    
+
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,19 +106,3 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('PROD2.png')
-                        .product__shadow
-                            +img('shad2.png')
-                    .product__info  
-                        .product__title  K2 VITAMIN
-                        .product__labels 
-                            .product__label Кости
-                            .product__label Сосуды
-                    
-                        .product__text 
-                            p Исследователи выяснили, что жители крупных городов более подвержены психологическому напряжению и депрессии. Всё дело в быстром ритме, который может привести к выгоранию и опустошённости. 
-                            p От сердечных заболеваний поможет ВИТАЛИТИ ВИТАМИН K2 MK-7.
-                                    

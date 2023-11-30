@@ -11,6 +11,24 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod15.png')
+                        .product__shadow(style="")
+                            +img('shad15.png')
+                    .product__info  
+                        .product__title  MACA
+                        .product__labels 
+                            .product__label Либидо
+                            .product__label Энергия
+                            .product__label Выносливость
+                    
+                        .product__text 
+                            p В крупных городах намного проще найти вторую половинку. Ведь в таких местах у будущих влюблённых столько точек соприкосновения, будь то метро или какой-нибудь театр. 
+                            p А чтобы либидо всегда было на высоте помогут ВИТАЛИТИ МАКА+ГЛИЦИНАТ ЦИНКА+Д-АСПАРАГИНОВАЯ КИСЛОТА.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,19 +106,4 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod15.png')
-                        .product__shadow(style="")
-                            +img('shad15.png')
-                    .product__info  
-                        .product__title  MACA
-                        .product__labels 
-                            .product__label Либидо
-                            .product__label Энергия
-                            .product__label Выносливость
-                    
-                        .product__text 
-                            p В крупных городах намного проще найти вторую половинку. Ведь в таких местах у будущих влюблённых столько точек соприкосновения, будь то метро или какой-нибудь театр. 
-                            p А чтобы либидо всегда было на высоте помогут ВИТАЛИТИ МАКА+ГЛИЦИНАТ ЦИНКА+Д-АСПАРАГИНОВАЯ КИСЛОТА.
+                

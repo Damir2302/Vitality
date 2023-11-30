@@ -11,6 +11,24 @@ block main
     section.section-product.section
         
             .product 
+                
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod9.png')
+                        .product__shadow(style="")
+                            +img('shad9.png')
+                    .product__info  
+                        .product__title  BUFFERED VITAMIN C
+                        .product__labels 
+                            .product__label Иммунитет
+                            .product__label Здоровая кожа
+                            .product__label Нервная система
+                    
+                        .product__text 
+                            p Один из аспектов проживания в мегаполисе – это огромные скопления людей, причём везде: в метро, на улицах, на пешеходных переходах и торговых центрах, а это приводит к распространению инфекций. 
+                            p Защитить иммунитет помогут ВИТАЛИТИ ВИТАМИН С.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,19 +106,4 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod9.png')
-                        .product__shadow(style="")
-                            +img('shad9.png')
-                    .product__info  
-                        .product__title  BUFFERED VITAMIN C
-                        .product__labels 
-                            .product__label Иммунитет
-                            .product__label Здоровая кожа
-                            .product__label Нервная система
-                    
-                        .product__text 
-                            p Один из аспектов проживания в мегаполисе – это огромные скопления людей, причём везде: в метро, на улицах, на пешеходных переходах и торговых центрах, а это приводит к распространению инфекций. 
-                            p Защитить иммунитет помогут ВИТАЛИТИ ВИТАМИН С.
+                

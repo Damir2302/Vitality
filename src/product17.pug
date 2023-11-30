@@ -11,6 +11,23 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod17.png')
+                        .product__shadow(style="")
+                            +img('shad17.png')
+                    .product__info  
+                        .product__title  MAGNESIUM CITRATE
+                        .product__labels 
+                            .product__label Сердце
+                            .product__label Мышцы
+                            .product__label Пищеварение
+                    
+                        .product__text 
+                            p Многие люди рвутся в большие города, но не всегда они понимают всю суть проживания в таком большом городе. Жить в мегаполисе способны только на самом деле жизнеспособные люди с недюжинным здоровьем. Укрепить мышечную и костную систему помогут ВИТАЛИТИ ЦИТРАТ МАГНИЯ и КОМПЛЕКС МАГНИЯ, а также универсальный минеральный комплекс КАЛЬЦИЙ МАГНИЙ ЦИНК МИНЕРАЛЫ Д3.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,18 +105,4 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod17.png')
-                        .product__shadow(style="")
-                            +img('shad17.png')
-                    .product__info  
-                        .product__title  MAGNESIUM CITRATE
-                        .product__labels 
-                            .product__label Сердце
-                            .product__label Мышцы
-                            .product__label Пищеварение
-                    
-                        .product__text 
-                            p Многие люди рвутся в большие города, но не всегда они понимают всю суть проживания в таком большом городе. Жить в мегаполисе способны только на самом деле жизнеспособные люди с недюжинным здоровьем. Укрепить мышечную и костную систему помогут ВИТАЛИТИ ЦИТРАТ МАГНИЯ и КОМПЛЕКС МАГНИЯ, а также универсальный минеральный комплекс КАЛЬЦИЙ МАГНИЙ ЦИНК МИНЕРАЛЫ Д3.
+                

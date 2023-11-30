@@ -11,6 +11,23 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod10.png')
+                        .product__shadow(style="")
+                            +img('shad10.png')
+                    .product__info  
+                        .product__title  IODINE from KELP
+                        .product__labels 
+                            .product__label Рост
+                            .product__label Нервная система
+                    
+                    
+                        .product__text 
+                            p Чаще всего мегаполисы находятся далеко от моря или океана, поэтому восполнить баланс недостающих микроэлементов поможет ВИТАЛИТИ ЙОД ИЗ ВОДОРОСЛЕЙ.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,18 +105,4 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod10.png')
-                        .product__shadow(style="")
-                            +img('shad10.png')
-                    .product__info  
-                        .product__title  IODINE from KELP
-                        .product__labels 
-                            .product__label Рост
-                            .product__label Нервная система
-                    
-                    
-                        .product__text 
-                            p Чаще всего мегаполисы находятся далеко от моря или океана, поэтому восполнить баланс недостающих микроэлементов поможет ВИТАЛИТИ ЙОД ИЗ ВОДОРОСЛЕЙ.
+                

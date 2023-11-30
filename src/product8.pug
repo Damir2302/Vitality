@@ -11,6 +11,24 @@ block main
     section.section-product.section
         
             .product 
+
+                .product__inner
+                    .product__picture-wrapper
+                        .product__picture 
+                            +img('prod8.png')
+                        .product__shadow(style="")
+                            +img('shad8.png')
+                    .product__info  
+                        .product__title  GINKGO biloba capsules
+                        .product__labels 
+                            .product__label Память
+                            .product__label Сосуды
+                        
+                    
+                        .product__text 
+                            p Очевидно, что в крупных городах уровень и качество образования намного выше, чем в мелких. Там также существует множество платформ для дополнительного образования, например, всевозможные курсы и коучинги. 
+                            p Чтобы память всегда была гибкой поможет ВИТАЛИТИ ГИНКГО БИЛОБА.
+                            
                 .product__slider 
                     .slider-nav-arrow--prev
                         include assets/images/arrow_left.svg
@@ -88,19 +106,4 @@ block main
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
-                .product__inner
-                    .product__picture-wrapper
-                        .product__picture 
-                            +img('prod8.png')
-                        .product__shadow(style="")
-                            +img('shad8.png')
-                    .product__info  
-                        .product__title  GINKGO biloba capsules
-                        .product__labels 
-                            .product__label Память
-                            .product__label Сосуды
-                        
-                    
-                        .product__text 
-                            p Очевидно, что в крупных городах уровень и качество образования намного выше, чем в мелких. Там также существует множество платформ для дополнительного образования, например, всевозможные курсы и коучинги. 
-                            p Чтобы память всегда была гибкой поможет ВИТАЛИТИ ГИНКГО БИЛОБА.
+                
