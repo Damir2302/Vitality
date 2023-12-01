@@ -140,10 +140,10 @@
 }
 
 .product__picture-wrapper .slider-nav-arrow--prev {
-    left: 22px;
+    left: -22px;
 
     @include breakpoint(md) {
-        left: 52px;
+        left: -52px;
     }
 
     @include breakpoint(lg) {
@@ -152,10 +152,10 @@
 }
 
 .product__picture-wrapper .slider-nav-arrow--next {
-    right: 22px;
+    right: -22px;
 
     @include breakpoint(md) {
-        right: 52px;
+        right: -52px;
     }
 
     @include breakpoint(lg) {
