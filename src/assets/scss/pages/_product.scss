@@ -7,10 +7,12 @@
 
     @include breakpoint(md) {
         padding-top: 17px;
+        min-height: calc(100vh - 100px);
     }
 
     @include breakpoint(xl) {
         padding-top: 53px;
+        min-height: calc(100vh - 136px);
     }
 }
 
@@ -19,55 +21,145 @@
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 3.6rem);
+    min-height: calc(100vh - 36px);
+
+    @include breakpoint(md) {
+        padding-bottom: 40px;
+        min-height: calc(100vh - 100px);
+    }
+
+    @include breakpoint(xl) {
+        min-height: calc(100vh - 136px);
+    }
 }
 
 
 
 .product__picture {
-    @include ratio(360, 360);
-
-}
-
-.product__picture-wrapper {
-    position: relative;
-    padding: 0 10px;
-    margin-bottom: 32px;
-
-    @include breakpoint(md) {
-        max-width: 520px;
-        margin-inline: auto;
-        margin-bottom: 43px;
-    }
+    @include ratio(224, 224);
 
     @include breakpoint(lg) {
-        max-width: 314px;
-        width: 100%;
-        padding: 0;
-        margin-bottom: 9px;
+        padding-bottom: 77.15%;
+        width: 77.15%;
     }
 
     @include breakpoint(xl) {
-        max-width: 478px;
-        margin-bottom: 87px;
+        padding-bottom: 0;
+        width: 478px;
+        height: 478px;
+    }
+}
+
+.product__picture-wrapper {
+    margin-bottom: 80px;
+    padding: 0 48px;
+    position: relative;
+
+    @include breakpoint(md) {
+        margin-bottom: 32px;
+        padding: 0 112px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0 0 100px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: -36px;
+        padding-bottom: 140px;
+    }
+}
+
+.product__picture-wrapper .swiper {
+    overflow: visible;
+}
+
+.product__picture-wrapper .swiper-slide {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: center;
     }
 }
 
 .product__shadow {
-    padding-bottom: calc(100% - 20px);
+    padding-bottom: 100%;
+    width: 100%;
     height: 0;
     position: absolute;
     bottom: 0;
-    transform: translateY(77%);
+    transform: translateY(78%);
     z-index: -1;
-    right: 10px;
-    left: 10px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 77.15%;
+        width: 77.15%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 0;
+        width: 478px;
+        height: 478px;
+    }
+}
+
+.product__shadow img {
+    width: 100%;
+    height: 100%;
     position: absolute;
+}
+
+.product__picture-wrapper .slider-nav-arrow {
+    background: rgba(255, 255, 255, 0.08);
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    z-index: 1;
+
+    @include breakpoint(md) {
+        width: 40px;
+        height: 40px;
+    }
+}
+.product__picture-wrapper .slider-nav-arrow svg {
+    width: 9px;
+    height: 9px;
+
+    @include breakpoint(md) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.product__picture-wrapper .slider-nav-arrow--prev {
+    left: 22px;
+
+    @include breakpoint(md) {
+        left: 52px;
+    }
+
+    @include breakpoint(lg) {
+        left: 0;
+    }
+}
+
+.product__picture-wrapper .slider-nav-arrow--next {
+    right: 22px;
+
+    @include breakpoint(md) {
+        right: 52px;
+    }
 
     @include breakpoint(lg) {
         right: 0;
-        left: 0;
-        transform: translateY(79%);
     }
 }
 
@@ -130,8 +222,9 @@
     }
 
     @include breakpoint(md) {
-        margin-bottom: 87px;
+        margin-bottom: 20px;
         padding: 0 20px;
+        font-size: 16px;
     }
 
     @include breakpoint(lg) {
@@ -184,8 +277,15 @@
         margin-right: 0;
     }
 
+    @include breakpoint(md) {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
     @include breakpoint(lg) {
         margin-right: 12px;
+        padding: 0 16px;
+        height: 37px;
     }
 
     @include breakpoint(xl) {
@@ -222,6 +322,11 @@
         position: absolute;
         bottom: 40px;
 
+        @include breakpoint(xl) {
+            width: 54px;
+            height: 54px;
+        }
+
 
         &:hover {
             background: rgba(255, 255, 255, 0.16);
@@ -236,13 +341,8 @@
         right: 14px;
     }
 
-    @include breakpoint(md) {
-        margin-bottom: 0;
-        margin-left: 20px;
-    }
-
     @include breakpoint(lg) {
-        margin: 0 auto;
+        margin: auto auto 0;
         padding: 0 var(--container);
         position: relative;
         width: 100%;
@@ -260,10 +360,18 @@
 .product__slide-img {
     @include ratio(126, 126);
     width: 36px;
+
+    @include breakpoint(md) {
+        width: 85px;
+    }
 }
 
 .product__slide.current .product__slide-img {
     width: 50px;
+
+    @include breakpoint(md) {
+        width: 126px;
+    }
 }
 
 .product__slide-img img {
@@ -279,32 +387,24 @@
     background: rgba(255, 255, 255, 0.08);
     transition: .4s;
 
-    &+.product__slide {
-        margin-left: 8px;
-    }
-
     &.current {
-        // height: 130%;
-        // transform: scale(1.1); 
         width: 70px;
         opacity: 1;
+
+        @include breakpoint(md) {
+            width: 163px;
+        }
+    }
+
+    @include breakpoint(md) {
+        width: 126px;
     }
 
     @include breakpoint(lg) {
         &:hover {
             background: rgba(255, 255, 255, 0.16);
         }
-        &+.product__slide {
-            margin-left: 15px;
-        }
-    
-
     }
-}
-
-.swiper-slide-active {
-    // transform: scale(1.1);
-
 }
 
 .slider {

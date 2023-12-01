@@ -14,10 +14,31 @@ block main
 
                 .product__inner
                     .product__picture-wrapper
-                        .product__picture 
-                            +img('prod3.png')
-                        .product__shadow(style="")
-                            +img('shad3.png')
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .product__picture 
+                                        +img('prod3.png')
+                                    .product__shadow(style="")
+                                        +img('shad3.png')
+                                        
+                                .swiper-slide
+                                    .product__picture 
+                                        +img('prod3.png')
+                                    .product__shadow(style="")
+                                        +img('shad3.png')
+                                        
+                                .swiper-slide
+                                    .product__picture 
+                                        +img('prod3.png')
+                                    .product__shadow(style="")
+                                        +img('shad3.png')
+
+                            .slider-nav-arrow.slider-nav-arrow--prev
+                                include assets/images/arrow_left.svg
+                            .slider-nav-arrow.slider-nav-arrow--next
+                                include assets/images/arrow_right.svg
+
                     .product__info  
                         .product__title  Calcium magnesium zinc & d3
                         .product__labels 
@@ -35,74 +56,73 @@ block main
                     .slider 
                         
                         .swiper-wrapper 
-                            a(href="product1.html").swiper-slide.product__slide
-                                    .product__slide-img 
-                                        +img('bio.png')
-                            a(href="product2.html").swiper-slide.product__slide
-                               
-                                    .product__slide-img 
-                                        +img('PROD2.png')
-                            a(href="product3.html").swiper-slide.product__slide.current 
-                                
-                                    .product__slide-img 
-                                        +img('prod3.png')
-                            a(href="product4.html").swiper-slide.product__slide 
-                                    .product__slide-img 
-                                        +img('prod4.png')
-                            a(href="product5.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod5.png')
+                            a(href="product1.html" style="background: #9E779B").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('bio.png')
+
+                            a(href="product2.html" style="background: #7D9447").swiper-slide.product__slide 
+                                .product__slide-img 
+                                    +img('PROD2.png')
+
+                            a(href="product3.html").swiper-slide.product__slide.current
+                                .product__slide-img 
+                                    +img('prod3.png')
+
+                            a(href="product4.html" style="background: #5A9063").swiper-slide.product__slide 
+                                .product__slide-img 
+                                    +img('prod4.png')
+
+                            a(href="product5.html" style="background: #63948E").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod5.png')
                             
-                            a(href="product6.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod6.png')
-                            a(href="product7.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod7.png')
-                            a(href="product8.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod8.png')
-                            a(href="product9.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod9.png')
-                            a(href="product10.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod10.png')
-                            a(href="product11.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod11.png')
-                            a(href="product12.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod12.png')
-                            a(href="product13.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod13.png')
-                            a(href="product14.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod14.png')
-                            a(href="product15.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod15.png')
-                            a(href="product16.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod16.png')
-                            a(href="product17.html").swiper-slide.product__slide 
-                                
-                                    .product__slide-img 
-                                        +img('prod17.png')
-                                        
+                            a(href="product6.html" style="background: #468A5A").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod6.png')
+
+                            a(href="product7.html" style="background: #E76143").swiper-slide.product__slide 
+                                .product__slide-img 
+                                    +img('prod7.png')
+
+                            a(href="product8.html" style="background: #3D9B62").swiper-slide.product__slide 
+                                .product__slide-img 
+                                    +img('prod8.png')
+
+                            a(href="product9.html" style="background: #DA693C").swiper-slide.product__slide 
+                                .product__slide-img 
+                                    +img('prod9.png')
+
+                            a(href="product10.html" style="background: #3D9B62").swiper-slide.product__slide 
+                                .product__slide-img 
+                                    +img('prod10.png')
+
+                            a(href="product11.html" style="background: #8F4644").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod11.png')
+
+                            a(href="product12.html" style="background: #3B7884").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod12.png')
+
+                            a(href="product13.html" style="background: #7B2F2F").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod13.png')
+
+                            a(href="product14.html" style="background: #51638E").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod14.png')
+
+                            a(href="product15.html" style="background: #AF3836").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod15.png')
+
+                            a(href="product16.html" style="background: #815175").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod16.png')
+
+                            a(href="product17.html" style="background: #5088AD").swiper-slide.product__slide
+                                .product__slide-img 
+                                    +img('prod17.png')
                                
                     .slider-nav-arrow--next
                         include assets/images/arrow_right.svg
