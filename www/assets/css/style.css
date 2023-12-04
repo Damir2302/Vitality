@@ -2462,12 +2462,12 @@ button {
     display: block
 }
 
-.contacts-page .header__phone path {
-    fill: #fff
+.about-page .nav-list__link {
+    color: #212b23
 }
 
-.contacts-page .nav-list__item:after {
-    color: rgba(255,255,255,.4)
+.about-page .header__phone {
+    color: #212b23
 }
 
 @media(min-width: 744px) {
