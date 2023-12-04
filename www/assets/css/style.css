@@ -2462,6 +2462,14 @@ button {
     display: block
 }
 
+.contacts-page .header__phone path {
+    fill: #fff
+}
+
+.contacts-page .nav-list__item:after {
+    color: rgba(255,255,255,.4)
+}
+
 @media(min-width: 744px) {
     .about {
         padding-top: 65px

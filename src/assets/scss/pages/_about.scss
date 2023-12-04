@@ -10,6 +10,14 @@
   
 }
 
+.about-page .nav-list__link {
+    color: #212b23;
+}
+
+.about-page .header__phone {
+    color: #212b23;
+}
+
 .about {
     @include breakpoint(md) {
         padding-top: 65px;
