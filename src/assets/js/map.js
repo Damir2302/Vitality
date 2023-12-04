@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
             // Добавление метки
             var myPlacemark = new ymaps.Placemark(
-                [55.727891, 37.449650],
+                [55.769580, 37.591710],
                 {},
                 {
                     preset: 'islands#redIcon'
