@@ -21,7 +21,7 @@
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 36px);
+    min-height: calc(100vh - 120px);
 
     @include breakpoint(md) {
         padding-bottom: 40px;
@@ -296,7 +296,10 @@
 
 
 .product__slider {
-    margin-top: auto;
+    
+    @include breakpoint(lg) {
+        margin-top: auto;
+    }
 
     .swiper-wrapper {
         // padding: 20px 0;

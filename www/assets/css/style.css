@@ -2774,7 +2774,7 @@ button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-height: calc(100vh - 36px)
+    min-height: calc(100vh - 120px)
 }
 
 @media(min-width: 744px) {
@@ -3128,8 +3128,10 @@ button {
     }
 }
 
-.product__slider {
-    margin-top: auto
+@media(min-width: 1024px) {
+    .product__slider {
+        margin-top: auto
+    }
 }
 
 .product__slider .swiper-wrapper {
