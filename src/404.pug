@@ -8,50 +8,81 @@ yandexMap: false
 extends includes/_page
 
 block main
-    section.section-buy.section
+    section.section-404.section
         .container   
-            .contacts 
-                .page-title  СТРАНИЦА НЕ НАЙДЕНА.
-                    .error__title  404 ошибка
-                .contacts__info 
-                    p Страница, которую вы запрашиваете, не существует. Возможно она устарела, была удалена, или был введен неверный адрес
-                       
-                .btn.btn--green На главную
-                
-        .contacts__bottom        
-            .section-marquee
-                .marquee
-                    .marquee-content
-                        .marquee-item НАУКА
-                        .marquee-item
-                            .marquee-icon  
-                                include assets/images/logo-marq.svg
-                        .marquee-item ЗДОРОВЬЕ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                        .marquee-item ИННОВАЦИИ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                    .marquee-content
-                        .marquee-item НАУКА
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                        .marquee-item ЗДОРОВЬЕ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-                        .marquee-item ИННОВАЦИИ
-                        .marquee-item
-                            .marquee-icon 
-                                include assets/images/logo-marq.svg
-            .footer__devs
-                    a(href="https://di-project.studio/") Разработка сайта
-                    span Di-Project
+            .page-title  СТРАНИЦА НЕ НАЙДЕНА.
+                .error__title  404 ошибка
+            .contacts__info 
+                p Страница, которую вы запрашиваете, не существует. Возможно она устарела, была удалена, или был введен неверный адрес
+                    
+            .btn.btn--green На главную
             
+        .footer__devs
+                a(href="https://di-project.studio/") Разработка сайта
+                span Di-Project
+        
+    style.
+        .section-404 {
+            display: flex;
+            flex-direction: column;
+        }
 
+        .section-404 .page-title {
+            color: #fff;
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 94.8%;
+            margin-bottom: 40px
+        }
 
-                                    
-                                    
+        @media(min-width: 744px) {
+            .section-404 .page-title {
+                font-size:6.4rem
+            }
+        }
+
+        @media(min-width: 1024px) {
+            .section-404 .page-title {
+                font-size:4.2rem
+            }
+        }
+
+        @media(min-width: 1440px) {
+            .section-404 .page-title {
+                font-size:6.4rem;
+                margin-bottom: 48px
+            }
+        }
+
+        @media(min-width: 744px) {
+            .section-404 {
+                padding-top:66px
+            }
+        }
+
+        @media(min-width: 1024px) {
+            .section-404 {
+                padding-top:25px
+            }
+        }
+
+        @media(min-width: 1440px) {
+            .section-404 {
+                padding-top:53px
+            }
+        }
+
+        .section-404 .footer__devs {
+            margin-top: auto;
+        }
+
+        .section-404 .contacts__info {
+            max-width: 420px;
+        }
+
+        @media(min-width: 1440px) {
+            .section-404 .contacts__info {
+                max-width: 620px;
+            }
+        }
